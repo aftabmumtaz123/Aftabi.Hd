@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Name</title>
+    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link href="http://fonts.cdnfonts.com/css/monoton" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+<!---=======================Navbar=======================-->
+    <nav class="navigation">
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span class="nav-icon"></span>
+        </label>
+
+        <a href="Aftabi_Hit.html" class="logo">Aftabi <span>.Hit</span></a>
+
+
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Genre</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <!------------Nav---End****************-->
+        <!------------Movie--Banner------****************-->
+    <section class="movie-banner">
+    <!------------Image----------------------****************-->
+        <div class="m-banner-img">
+            <img src="civil-war.jpg" alt="">
+        </div>
+        <!-------====================================Content===============================-->
+        <div class="banner-container">
+
+<!----------------------Title-Container------------------------------------------------>
+            <div class="title-container">
+                <!----------------------------Title--Top------------------------------->
+                    <div class="title-top">
+<!---------------------------Movie--title-->
+                <div class="movie-title">
+                    <h1>Avengers: Civil War</h1>
+                </div>
+<!----------------------------More--About--Movie=====================-->
+                <div class="more-about-movie">
+                    <span class="quality">Full HD</span>
+                    <div class="rating">
+                        8.2 <img src="IMDB.png" alt="">
+                    </div>
+                    <span>Released at: 28 august 2017</span>
+                    <span> Duration: 87 minutes</span>
+                </div>
+<!-------------------------Language-------------------------->
+                <div class="language">
+                    <span>English and Urdu</span>
+                </div>
+            </div>
+            <!----------------------------Title-Bottom=============================-->
+            <div class="title-bottom">
+                <!-------------Category-=========-->
+                <div class="category">
+                    <strong>Category</strong><br>
+                    <a href="#">Adventure,</a><a href="#">Mystery</a> <a href="#">& Thrilling</a>
+                </div>
+                <!-------Trailer-Button-->
+                <a href="https://youtu.be/dKrVegVI0Us" class="watch-btn">Watch Trailer</a>
+            </div>
+            </div>
+            <!------------------Play--Button-->
+            <div class="play-btn-container">
+                <div class="play-btn">
+                  <a href="javascript:void">  <i class="fas fa-play"></i></a>
+                </div>
+            </div>
+            <!-------===========Video-Full-Movie************************-->
+            <div id="play" class="play">
+                <!----------------Close-btn-->
+                <a href="javascript:void" class="close-movie">
+                    <i class="fas fa-times"></i>
+                </a>
+                <!--------Movie-->
+                <div class="play-movie">
+                    <video id="m-video" controls>
+                        <source src="data/1.mkv" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------Banner-End=======================================-->
+
+
+    <!------------------Movie--Details=======================================-->
+    <section class="movie-details">
+        <strong>Avengers: Civil War</strong>
+        <p>Friction arises between the Avengers when one group supports <br>
+             the government's decision to implement a law to control <br>
+              their powers while the other opposes it.</p>
+    </section>
+
+    <!---------------------------------------------Screenshots=======================================-->
+    <section class="screenshots">
+        <strong>Screenshots</strong>
+        <!---------------Screenshot--Container-->
+        <div class="screen-s-container">
+            <img src="data/sumeet-b---WQ_E8gIcU-unsplash.jpg" alt="">
+            <img src="data/cesar-hernandez--IHuse226fE-unsplash.jpg" alt="">
+            <img src="data/ss1.jfif" alt="">
+            <img src="data/ss2.jfif" alt="">
+
+
+
+        </div>
+    </section>
+
+<!-------=================================Download Movie------------------------------>
+<section class="download-movie">
+    <!--------------Container----------------->
+    <div class="download-container">
+        <!-------------box-->
+        <div class="download-box">
+            <span><i class="fas fa-server"></i>Server 1</span>
+            <span>English & Urdu</span>
+            <span>1080p</span>
+            <a href="data/1.mkv">Download</a>
+        </div>
+
+        <div class="download-box">
+            <span><i class="fas fa-server"></i>Server 2</span>
+            <span>English & Urdu</span>
+            <span>720p</span>
+            <a href="data/1.mkv">Download</a>
+        </div>
+
+        <div class="download-box">
+            <span><i class="fas fa-server"></i>Server 3</span>
+            <span>English & Urdu</span>
+            <span>480p</span>
+            <a href="data/1.mkv">Download</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!--------------------------------------------Footer==============================-->
+
+
+<footer>
+
+    <!------------------------------Footer--Logo-->
+    <a href="Aftabi_Hit.html" class="logo">
+        Aftabi <span>Hit</span>
+    </a>
+    <span class="copyright">
+        copyright 2022 - GoingToInternet
+    </span>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+<!-------------------------------Jquery=====-->
+<script src="javascript.js"></script>
+
+<script>
+  /*--------------Menu btn Fixed when scroll--------*/
+  $(window).scroll(function(){
+  if($(document).scrollTop() >20){
+$('.navigation').addClass('fix-icon');
+  }
+
+  else{
+$('.navigation').removeClass('fix-icon');
+  }
+});
+
+/*----------------popup open--------*/
+$(document).on('click','.play-btn a',function(){
+    $('.play').addClass('active-popup');
+});
+
+/*----------------popup close--------*/
+$(document).on('click','.close-movie',function(){
+    $('.play').removeClass('active-popup');
+});
+
+
+/*----------------auto--Play-when---open--------*/
+$('.play-btn a').click(function(){
+    $('#m-video')[0].play();
+});
+
+/*----------------close--Play-when---close--popup--------*/
+$('.close-movie').click(function(){
+    $('#m-video')[0].pause();
+});
+
+</script>
+</body>
+</html>
